@@ -1,1 +1,29 @@
 # AI_Methods
+
+**#Notes from classes
+
+**9.10 
+lab1_students****
+1. Ściągnęłam anaconda, ściągnęłam jupyter notebook
+2. dataset z kaagle ma być zapisany w tym samym folderze
+
+df - data set
+df.describe() - opisuje dane ilościowe. Warto wyświetlić, żeby zobaczyć czy nie ma braków danych
+ogólnie nie wyświetla się wszystkich elementów z tabeli. ale można to zrobić pętlą jeśli szuka się jakiśgłupotek, jak np braków danych
+
+**lab1_water**
+NaN - wyświetli zarówno jak nic nie ma i jak spodziewa się liczby a ma coś innego.
+żeby poradzić sobie z brakami danych można
+    - zamienić je na medianę (ale zmieni nam si e rozkład, więc trzeba uważać)
+    - wyrzucić te kolumny (ale minus bo my chcemy mieć jak najwięcj danych)
+    
+**lab1_1.4 sklearn i SVM - zadanie**
+df['Species'].value_counts() - podsumowanie kolumny
+dobrze, że zbiory są równoliczne, bo będą się tak samo uczyć.
+
+**UCZENIE MASZYNOWE**
+1. SVM
+- chozi o to żeby znaleźć jak najlepszą linię która odseparuje różniące się dane od siebie. 
+- jest dla danych binarnych, a żeby wykorzystać do więcej klas niż 2 to ściągamy SVC
+
+- ważne jest żeby wyodrębnić dane uczące się oraz testowe (mamy do tego funkcję)
