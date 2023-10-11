@@ -27,3 +27,7 @@ dobrze, że zbiory są równoliczne, bo będą się tak samo uczyć.
 - jest dla danych binarnych, a żeby wykorzystać do więcej klas niż 2 to ściągamy SVC
 
 - ważne jest żeby wyodrębnić dane uczące się oraz testowe (mamy do tego funkcję)
+
+  Sprawdzając klasyfikator ustwiamy wartość random_state.
+  Ten parametr kontroluje inicjalizację generatora liczb pseudolosowych, co ma wpływ na losowość wyników w wielu operacjach. Ustawiając random_state na konkretną liczbę (na przykład 42), uzyskasz deterministyczne wyniki, co oznacza, że te same operacje będą zawsze dawać te same wyniki, pod warunkiem, że pozostałe ustawienia i dane pozostaną takie same.
+Warto dodać, że konkretna wartość random_state nie ma znaczenia; ważne jest tylko to, że jest ustawiona na określoną wartość, która jest taka sama w różnych miejscach w kodzie, aby uzyskać te same wyniki. W praktyce używa się różnych wartości, takich jak 42, ponieważ jest to liczba intuicyjna i często używana jako przykładowa wartość.
