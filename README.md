@@ -35,3 +35,9 @@ Warto dodać, że konkretna wartość random_state nie ma znaczenia; ważne jest
 **Heart Attact Prediction**
 Zadanie domowe
 Stworzenie modelu sztucznej sieci neuronowej, która pozwala przewidzieć czy u osoby jest większe ryzyko wystąpienia ataku serca
+
+#narysuj wykres punktowy (plot) zależności pomiedzy X i y
+import matplotlib.pyplot as plt
+plt.plot(X,y, ".", color="salmon")
+plt.ylabel("price")
+plt.xlabel("sqft_living")
