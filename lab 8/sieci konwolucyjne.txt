@@ -1,0 +1,43 @@
+Sieci konwolucyjne
+
+Różnice:
+- wczytywanie obrazów (uwaga - często wywala błąd że wczytał, a nie wczytał)
+- pierwszymi warstwami będą warstwy konwolucyjne
+
+Należy pa,iętać
+- Każdy obraz kolorowy jest tak naprawdę macierzą
+- Natężenie koloru wyświetlane z regułu w zakresie 0-255 (to jest 2^8)
+
+Cel: starają się z każdego obrazku wydobyć jakieś cechy, wręcz można je porównać do przetwazania wzrokoweg wg Maara. Część filtrów jest znana, niektóre są niezrozumiałe. Rozpoznają np linie pionowe, poziome...
+
+Podstawą przetwarzania są filtry
+- zazwyczaj 3x3
+- lub 5x5
+- a dookoła musi być po komórce
+
+Filtrowanie działa mniej więcej w ten sposób. że spikselowany obrazek mnożymy przez macierz. Tj lewy górny róg obrazka * lewy górny róg filtra. itp.
+
+Duże obrazki - pooling:
+- na etapie przetwarzania w sieci konwolucyjne, one są zmniejszane
+- do tego służy pooling
+- my będziemy korzystać max pooling. 
+    - z jakiegoś otoczenia wybieram jakąś wartość i wybieram z nigeo np największą wartość i przepisuję do nowej, generalnej komórki.
+    
+Co jak filtrujemy krańce?
+- dokładamy dokoła zera
+- stride i padding
+
+
+Budowa sieci:
+1) warstwa konwolucyjna
+2) pooling
+3) flatten, czyli dwuwymiarowy obrazek zamieniamy wierszami na ciąg liczb
+4) dense
+
+
+Pobieranie swoich onrazków
+1 klasa w jednym folderze
+2 klasa w drugim folderze
+= one obie w nowym folderze
+
+zbiór testowy póki co w osobnym folderze
